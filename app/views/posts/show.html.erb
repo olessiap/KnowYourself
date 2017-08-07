@@ -7,8 +7,7 @@
 <p class="date">
 	<% if user_signed_in? && current_user == @post.user%>
 	Submitted <%= time_ago_in_words(@post.created_at) %> ago 
-	<%= link_to "Edit", "/users/#{current_user.id}/categories/#{@category.id}/posts/#{@post.id}/edit"%> 
-
-</p>
+	<%= link_to "Edit", "/users/#{current_user.id}/categories/#{@category.id}/posts/#{@post.id}/edit" %> 
+	<%= link_to 'Delete', user_category_post_path(@post.id), :method => :delete %>
 
 <% end %>
