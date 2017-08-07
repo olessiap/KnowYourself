@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
-	belongs_to :user
-	belongs_to :category
+	attr_accessor :name, :category_id
+	belongs_to :user, optional: true
+	belongs_to :category, optional: true
 end

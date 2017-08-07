@@ -1,1 +1,6 @@
 <p> posts index </p>
+
+
+<% @posts.each do |item| %>
+	<p> <%= link_to item.post_title %> </p>
+<%end%>

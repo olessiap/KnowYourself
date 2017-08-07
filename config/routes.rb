@@ -9,6 +9,4 @@ Rails.application.routes.draw do
   		resources :posts
 		end
 	end
-
-	get 'categories', to: 'categories#show', as: 'categories'
 end

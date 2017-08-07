@@ -1,33 +1,68 @@
 class PostsController < ApplicationController
 	before_action :authenticate_user!
+	before_action :load_category
 
 	def index 
 		@posts = User.find(params[:user_id]).posts.order(id: :desc)
 	end 
 
 	def show
-		@post = Post.find(params[:user_id])
+    p params
+    p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+		@post = User.find(params[:user_id]).posts.find(params[:id])
 	end
 
 	def new
-		@post = Post.new(post_params)
+		p params
+    p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+		@post = Post.new
+		p @post.errors
 	end
 
 	def create
-		p @post.errors
     p params
     p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-		@post = Post.new(post_params)
-		if @post.save
+		@post = Post.new(post_params.merge({user_id: current_user.id}))
+		if @post.save 
 			flash[:notice] = "post successfully created!"
-			redirect_to "/users#{current_user.id}/categories/#{current_category.id}/posts/#{@post.id}"
+			redirect_to "/users/#{@current_user.id}/categories/#{@category.id}/posts/#{@post.id}"
 		else
 			render 'new'
 		end
 	end
 
+	def edit
+		@post = Post.find(params[:id])
+	end
+
+	def update
+		@post = Post.find(params[:id])
+
+		if @post.update(params[:id].permit(:post_title, :post_description))
+			redirect_to post_path(@post)
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		p params
+    p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    @post = Post.find(params[:id])
+  	if @post.destroy
+    	redirect_to root_path
+  	end
+  end
+
+	private
+
 	def post_params
-		params.require(:post).permit(:post_title, :post_description).merge(category_id: params[:category_id])
+		params.require(:post).permit(:post_title, :post_description)
+		#.merge(user_id: params[:user_id], category_id: params[:category_id])
+	end
+
+	def load_category
+		@category = Category.find(params[:category_id])
 	end
 
 end
