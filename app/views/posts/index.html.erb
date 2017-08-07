@@ -2,5 +2,5 @@
 
 
 <% @posts.each do |item| %>
-	<p> <%= link_to item.post_title %> </p>
+	<p> <%= link_to item.post_title, user_category_post_path(current_user, @post) %> </p>
 <%end%>

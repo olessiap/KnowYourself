@@ -8,21 +8,17 @@ class PostsController < ApplicationController
 
 	def show
     p params
-    p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    
 		@post = User.find(params[:user_id]).posts.find(params[:id])
 	end
 
 	def new
-		p params
-    p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 		@post = Post.new
 		p @post.errors
 	end
 
 	def create
-    p params
-    p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-		@post = Post.new(post_params.merge({user_id: current_user.id}))
+		@post = Post.new(post_params.merge({user_id: current_user.id, category: @category}))
 		if @post.save 
 			flash[:notice] = "post successfully created!"
 			redirect_to "/users/#{@current_user.id}/categories/#{@category.id}/posts/#{@post.id}"
@@ -46,8 +42,6 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
-		p params
-    p "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     @post = Post.find(params[:id])
   	if @post.destroy
     	redirect_to root_path

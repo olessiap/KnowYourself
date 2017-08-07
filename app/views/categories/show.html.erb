@@ -3,3 +3,5 @@
 	 <% @category.posts.each do |post| %>
 	<p><%= link_to post.post_title,  user_category_post_path(current_user, post)%> </p>
 	<% end %>
+
+<%= link_to "New Post", new_user_category_post_path(current_user, @category) %>
