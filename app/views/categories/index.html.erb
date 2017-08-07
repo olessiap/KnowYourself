@@ -2,5 +2,5 @@
 
 
 <% @categories.each do |category| %>
-	<p> <%= link_to category.category_title%> </p>
+	<p> <%= link_to category.category_title, user_category_path(current_user, category) %> </p>
 <% end %>
