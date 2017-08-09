@@ -2,5 +2,6 @@
 
 
 <% @posts.each do |item| %>
-	<p> <%= link_to item.post_title, user_category_post_path(current_user, @post) %> </p>
+	<p> <%= link_to item.post_title, current_user.posts.find(params[:id])%> </p>
+	<p> <%= image_tag item.image.url(:medium) %> </p>
 <%end%>

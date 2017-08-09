@@ -1,7 +1,17 @@
-<p>Categories Show Page!</p>
+<div class="container">
+<p><%= @category.category_title %></p>
 
-	 <% @category.posts.each do |post| %>
-	<p><%= link_to post.post_title,  user_category_post_path(current_user, post)%> </p>
-	<% end %>
+  <% if user_signed_in? %>
+    <% @category.posts.each do |post| %><br>
+      <% if current_user == post.user %>
+        <a href="<%= category_post_path(@category, post) %>" class="textWithBlurredBg"> 
+          <%= image_tag post.image.url %>
+          <h2><%= post.post_title%></h2>
+        </a>
+      <%end%>
+    <%end%>
+  <%end%>
+</div>
 
-<%= link_to "New Post", new_user_category_post_path(current_user, @category) %>
+
+

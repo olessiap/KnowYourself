@@ -5,31 +5,29 @@
     <%= csrf_meta_tags %>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
    <nav class="navbar navbar-light bg-faded">
     <div class="container navbar-container">
-      <%= link_to image_tag("Know-Yourself-Header.png",class:'logo', width: '140', height: '100', alt: ''), root_path %>
-
+      <%= link_to image_tag("Know-Yourself-Header.jpg",class:'logo', width: '140', height: '100', alt: ''), root_path %>
       <ul class="nav navbar-nav navbar-right">
-
-        <!--<li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
         <% if user_signed_in? %>
            <%= link_to "logout", destroy_user_session_path, method: :delete %>
         <% else %>
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="<%= new_user_registration_path %>"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+            <li><a href="<%= user_session_path %>"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
         <% end %>
       </ul>
     </div>
-  </nav>   
-    <%= yield %>
+  </nav>  
+     <%= yield %>
   </body>
 </html>

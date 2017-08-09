@@ -1,6 +1,47 @@
-<h1>categories index</h1>
+<div class="container">
+  <h2>KNOW YOURSELF</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <% @categories.each_with_index do |slide, i| %>
+        <li data-target="#myCarousel" data-slide-to=<%= i %> <%=i%> class="<%= i == 0 ? 'active' : '' %>"></li>
+      <% end %>
+    </ol>
 
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <% @categories.each_with_index do |slide, i| %>
+        <div class="item <%= i == 0 ? 'active' : '' %>">
+          <% if i == 0 %>
+            <%= image_tag "sf.jpeg" %>
+          <% elsif i == 1 %>
+            <%= image_tag "bigsur.jpg" %>
+          <% elsif i == 2 %>
+            <%= image_tag "landingpage.jpg" %>
+          <% elsif i == 3 %>
+            <%= image_tag "trees.jpg" %>
+          <% elsif i == 4 %>
+            <%= image_tag "austrich.jpg" %>
+          <% end %>
 
-<% @categories.each do |category| %>
-	<p> <%= link_to category.category_title, user_category_path(current_user, category) %> </p>
-<% end %>
+          <div class="carousel-caption">
+            <%= link_to slide.category_title, category_path(slide), data: {target: '#carousel-custom', slide_to: i}, class: (i == 0 ? 'active' : nil) %>
+          </div>
+        </div>
+      <% end %>
+
+    
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
