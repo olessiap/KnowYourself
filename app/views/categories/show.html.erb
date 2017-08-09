@@ -1,6 +1,6 @@
 <div class="container">
 <p><%= @category.category_title %></p>
-
+<%= link_to "New Post", new_category_post_path(@category) %><br>
   <% if user_signed_in? %>
     <% @category.posts.each do |post| %><br>
       <% if current_user == post.user %>
@@ -12,6 +12,3 @@
     <%end%>
   <%end%>
 </div>
-
-
-

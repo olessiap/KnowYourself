@@ -1,14 +1,59 @@
-<p> Posts show </p>
+<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
 
-<h2> Post Title: <%= @post.post_title %> </h2>
-<%= link_to image_tag(@post.image.url(:large)), @post.image.url %>
-<p>Post Body: <%= @post.post_description %> </p>
+<article>
+    
+    <header>
+        <img id="image"<%= image_tag @post.image.url %> >
+        <div class="header-text"> 
+        	<%= @post.post_title %>
+        </div>
+        
+    </header>
+    
+    <div class="background-bar">
+        
+    </div>
+    
+    <section class="container-fluid main-body">
+        <section class="row">
+            
+            <div class="hidden-xs col-sm-1 col-md-2">
+                
+            </div>
+            
+            <div class="col-xs-12 col-sm-10 col-md-8">
+            
+                <div class="content-holder">
+                    <div class="content-description">
+                    	<div class="published-date">
+                    		<span class="lead text-muted">
+                    			<p class="date">
+									<% if user_signed_in? && current_user == @post.user%>
+									Submitted <%= time_ago_in_words(@post.created_at) %> ago </p>
+									<div class="post-options">
+										<%= link_to "Edit", "/categories/#{@category.id}/posts/#{@post.id}/edit" %> |
+										<%= link_to 'Delete', category_post_path(@category, @post.id), :method => :delete %>
+									</div>
+								<% end %>
 
+                    		</span>
 
-<p class="date">
-	<% if user_signed_in? && current_user == @post.user%>
-	Submitted <%= time_ago_in_words(@post.created_at) %> ago 
-	<%= link_to "Edit", "/categories/#{@category.id}/posts/#{@post.id}/edit" %> 
-	<%= link_to 'Delete', category_post_path(@category, @post.id), :method => :delete %>
+                    	</div>
+                    </div>
+                    <div class="content-body">
+                        <p><%= @post.post_description %> </p>
+                         
+                    </div>
 
-<% end %>
+                    <div class="hidden-xs col-sm-1 col-md-2">
+                
+            		</div>
+                    
+                </div>
+            
+            </div>
+            
+        </section>
+    </section>
+    
+</article>

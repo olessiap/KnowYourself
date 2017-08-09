@@ -14,20 +14,7 @@
 
   <body>
   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-   <nav class="navbar navbar-light bg-faded">
-    <div class="container navbar-container">
-      <%= link_to image_tag("Know-Yourself-Header.jpg",class:'logo', width: '140', height: '100', alt: ''), root_path %>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-           <%= link_to "logout", destroy_user_session_path, method: :delete %>
-        <% else %>
-            <li><a href="<%= new_user_registration_path %>"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-            <li><a href="<%= user_session_path %>"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-        <% end %>
-      </ul>
-    </div>
-  </nav>  
+  <p class="alert"><%= alert %></p>  
      <%= yield %>
   </body>
 </html>
