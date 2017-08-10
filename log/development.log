@@ -33940,3 +33940,2256 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 235ms (Views: 74.4ms | ActiveRecord: 63.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-09 19:32:01 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (102.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 274ms (Views: 253.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-08-09 19:32:19 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (3.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 152ms (Views: 114.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/categories/1/posts/28" for 127.0.0.1 at 2017-08-09 19:32:32 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"28"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 28], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 203ms (Views: 125.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 19:32:47 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (19.5ms)
+  Rendered posts/new.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 120ms (Views: 92.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/1/posts/24" for 127.0.0.1 at 2017-08-09 19:33:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"24"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (7.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 24], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 261ms (Views: 177.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 19:33:52 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (56.0ms)
+  Rendered posts/new.html.erb within layouts/application (77.2ms)
+Completed 200 OK in 208ms (Views: 183.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 19:37:30 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (415.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (19.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (49.8ms)
+  Rendered posts/new.html.erb within layouts/application (74.3ms)
+Completed 200 OK in 797ms (Views: 271.7ms | ActiveRecord: 434.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-08-09 20:15:08 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WTFg+DhWokQy9tYO1wC8nVJZ0CYx/XOoG1QMyXdsEy2CB5rzm8OOsQs6nXhutSt7+ULtRE0dhdy2p7ioVbgJsg=="}
+  [1m[36mUser Load (79.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (28.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 371ms (ActiveRecord: 107.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-09 20:15:09 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (6.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (108.4ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-08-09 20:15:09 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WTFg+DhWokQy9tYO1wC8nVJZ0CYx/XOoG1QMyXdsEy2CB5rzm8OOsQs6nXhutSt7+ULtRE0dhdy2p7ioVbgJsg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-09 20:15:09 -0500
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 400ms (Views: 380.6ms | ActiveRecord: 6.5ms)
+
+
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (37.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (664.6ms)
+Completed 200 OK in 779ms (Views: 522.2ms | ActiveRecord: 253.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-09 20:15:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (28.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (159.8ms)
+Completed 200 OK in 473ms (Views: 385.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-09 20:15:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (18.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 146ms (Views: 142.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-08-09 20:15:26 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (10.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 239ms (Views: 226.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-08-09 20:32:38 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (26.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (231.0ms)
+Completed 200 OK in 592ms (Views: 553.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-09 20:32:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (10.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 198ms (Views: 190.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-08-09 20:32:53 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BpNhHbjqkKhhH0VoGBUkjmnX/3DgRGba4r4CcZz9Lf7FNMsqYlUG9t5Fiy2WLLYpgdDfBpzpcM3liQUPCwGUOg==", "user"=>{"email"=>"olessia.potapova@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (121.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "olessia.potapova@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (23.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (42.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2017-08-10 01:32:53.663903"], ["last_sign_in_at", "2017-08-09 03:00:17.973339"], ["sign_in_count", 9], ["updated_at", "2017-08-10 01:32:53.716220"], ["id", 1]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 581ms (ActiveRecord: 193.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-09 20:32:53 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (48.1ms)
+  [1m[36mUser Load (50.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 228ms (Views: 168.2ms | ActiveRecord: 51.4ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-09 20:32:59 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (8.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (16.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (110.9ms)
+Completed 200 OK in 378ms (Views: 312.8ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:33:03 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (42.3ms)
+  Rendered posts/new.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 1117ms (Views: 1049.6ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:39:45 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (14.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (30.1ms)
+  Rendered posts/new.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 214ms (Views: 148.6ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:40:07 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (19.8ms)
+  Rendered posts/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 103ms (Views: 86.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-09 20:40:10 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (9.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 272ms (Views: 188.8ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:40:13 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (16.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (17.5ms)
+  Rendered posts/new.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 191ms (Views: 149.1ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:40:27 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (20.4ms)
+  Rendered posts/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 91ms (Views: 81.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:40:36 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (11.7ms)
+  Rendered posts/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 99ms (Views: 86.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:40:46 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.3ms)
+  Rendered posts/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 75ms (Views: 64.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:57:45 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (38.7ms)
+  Rendered posts/new.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 246ms (Views: 180.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:58:20 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (66.2ms)
+  Rendered posts/new.html.erb within layouts/application (84.4ms)
+Completed 200 OK in 270ms (Views: 217.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:58:38 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (17.4ms)
+  Rendered posts/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 115ms (Views: 99.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:58:49 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (18.9ms)
+  Rendered posts/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 160ms (Views: 117.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:59:25 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (18.9ms)
+  Rendered posts/new.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 152ms (Views: 134.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:59:39 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (27.6ms)
+  Rendered posts/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 150ms (Views: 128.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-09 20:59:57 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (19.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (71.3ms)
+Completed 200 OK in 211ms (Views: 168.4ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 20:59:59 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (51.7ms)
+  Rendered posts/new.html.erb within layouts/application (96.6ms)
+Completed 200 OK in 267ms (Views: 189.0ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 21:00:13 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YEA8ZijtJY43+rKda0LovPG2RqRNyeGGfgILpjJpj0mgEKpZsZeGvECfViGzmKq2qgWBE7LNOtv2iNoUOJzP/A==", "post"=>{"post_title"=>"", "post_description"=>""}, "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (30.6ms)
+  Rendered posts/new.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 162ms (Views: 113.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 21:00:54 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (27.4ms)
+  Rendered posts/new.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 225ms (Views: 181.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 21:01:02 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8WyFhJpVgU1G+ODAIUT2JfAEj3KEIId8Qsb+odT5pn/CPqVXfa9DK9ia/Rzc84IkkAvaQ60sJTGwUIryO2tjQ==", "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 19ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/posts_controller.rb:55:in `post_params'
+app/controllers/posts_controller.rb:21:in `create'
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 21:01:33 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8WyFhJpVgU1G+ODAIUT2JfAEj3KEIId8Qsb+odT5pn/CPqVXfa9DK9ia/Rzc84IkkAvaQ60sJTGwUIryO2tjQ==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fce22e20b38 @tempfile=#<Tempfile:/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/RackMultipart20170809-79562-10gqoev.jpeg>, @original_filename="sf.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"sf.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-1kka9mw.jpeg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]' -auto-orient -resize "150x150" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/f7a7d2c20ef74585b5076ab4fb12c48420170809-79562-otwf0c'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]' -auto-orient -resize "300x300" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/f7a7d2c20ef74585b5076ab4fb12c48420170809-79562-1ibx5cu'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-mfty1p.jpeg[0]' -auto-orient -resize "600x600" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/f7a7d2c20ef74585b5076ab4fb12c48420170809-79562-nhi15o'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170809-79562-1sm7h65.jpeg'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (27.9ms)
+  Rendered posts/new.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 2396ms (Views: 165.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/categories/3/posts" for 127.0.0.1 at 2017-08-09 21:02:40 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (14.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."id" DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (56.7ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 17.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/views/posts/index.html.erb:5:in `block in _app_views_posts_index_html_erb___939066641441938575_70261656262860'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___939066641441938575_70261656262860'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 21:02:48 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (19.8ms)
+  Rendered posts/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 115ms (Views: 102.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 21:04:05 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (17.0ms)
+  Rendered posts/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 176ms (Views: 132.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 21:04:30 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.3ms)
+  Rendered posts/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 81ms (Views: 69.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 21:05:42 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (28.4ms)
+  Rendered posts/new.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 209ms (Views: 158.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 21:05:47 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v4fh3pDl7xls1NCfdG8XS9nyPtEtFUj0X0Nlc1kMBYbbSqld33oEEPatWOgHmcqb3HIDhemxen1oiTyiFrJOkg==", "post"=>{"post_description"=>""}, "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.1ms)
+  Rendered posts/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 87ms (Views: 59.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/categories/3/posts" for 127.0.0.1 at 2017-08-09 21:38:00 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (69.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (11.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (23.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."id" DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (118.0ms)
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 104.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/views/posts/index.html.erb:5:in `block in _app_views_posts_index_html_erb___939066641441938575_70261543781820'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___939066641441938575_70261543781820'
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-09 21:38:08 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 88ms (Views: 67.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/categories/3/posts/29" for 127.0.0.1 at 2017-08-09 21:38:11 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"29"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (17.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (56.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 190ms (Views: 70.2ms | ActiveRecord: 75.9ms)
+
+
+Started GET "/categories/3/posts/29" for 127.0.0.1 at 2017-08-09 21:40:23 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"29"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 207ms (Views: 141.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-09 21:40:39 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (5.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (84.6ms)
+Completed 200 OK in 204ms (Views: 168.0ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 21:40:52 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (28.3ms)
+  Rendered posts/new.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 185ms (Views: 124.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:00:55 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (42.7ms)
+  Rendered posts/new.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 322ms (Views: 241.9ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 22:01:03 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5fh7pfg8RKNLIn7IbHGE+N8qTSFk2CTEV/CPvsCXNfyBNTMmt6OvqtFb9r8fh1ko2qpwdaB8Fk1gOtZvjyl+6A==", "post"=>{"post_description"=>""}, "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (12.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (14.3ms)
+  Rendered posts/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 114ms (Views: 75.4ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:05:47 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (43.7ms)
+  Rendered posts/new.html.erb within layouts/application (79.2ms)
+Completed 200 OK in 287ms (Views: 230.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:23:25 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (543.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (18.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (211.7ms)
+  Rendered posts/new.html.erb within layouts/application (275.8ms)
+Completed 500 Internal Server Error in 1003ms (ActiveRecord: 561.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Post:0x007fce228bf608>):
+    13: 
+    14: 	<p>
+    15:     <%= f.label :title %> <br>
+    16: 	  <%= f.text_field :title%>
+    17: 	</p>
+    18: 
+    19: 	<p>
+  
+app/views/posts/_form.html.erb:16:in `block in _app_views_posts__form_html_erb___2646753199740408324_70261664098680'
+app/views/posts/_form.html.erb:2:in `_app_views_posts__form_html_erb___2646753199740408324_70261664098680'
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261659789240'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:25:17 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (36.9ms)
+  Rendered posts/new.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 223ms (Views: 182.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:25:42 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (12.0ms)
+  Rendered posts/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 106ms (Views: 92.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:26:01 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.2ms)
+  Rendered posts/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 85ms (Views: 74.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 22:26:04 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hsv9JUFVDL/85PBDt7yvKMcnehoIhjtU4wZLOYIy3fviBrWmDsrntmadeDTESnL4wqdHTswiCd3UzBLozYyW7w==", "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 30ms (ActiveRecord: 12.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/posts_controller.rb:55:in `post_params'
+app/controllers/posts_controller.rb:21:in `create'
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 22:26:43 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hsv9JUFVDL/85PBDt7yvKMcnehoIhjtU4wZLOYIy3fviBrWmDsrntmadeDTESnL4wqdHTswiCd3UzBLozYyW7w==", "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 48ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/posts_controller.rb:55:in `post_params'
+app/controllers/posts_controller.rb:21:in `create'
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 22:27:09 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hsv9JUFVDL/85PBDt7yvKMcnehoIhjtU4wZLOYIy3fviBrWmDsrntmadeDTESnL4wqdHTswiCd3UzBLozYyW7w==", "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 14ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/posts_controller.rb:55:in `post_params'
+app/controllers/posts_controller.rb:21:in `create'
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 22:28:49 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hsv9JUFVDL/85PBDt7yvKMcnehoIhjtU4wZLOYIy3fviBrWmDsrntmadeDTESnL4wqdHTswiCd3UzBLozYyW7w==", "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 56ms (ActiveRecord: 8.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/posts_controller.rb:55:in `post_params'
+app/controllers/posts_controller.rb:21:in `create'
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-09 22:28:58 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (5.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 95ms (Views: 80.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:29:00 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (13.3ms)
+  Rendered posts/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 85ms (Views: 73.6ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-09 22:29:05 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2U3TgopkNll4VZZ7CBKCl9YY++D8GmYwdRG7VkuEhfQZHUW9Ex6Vaw8wcsfQyMCdjas8VwMevW39m2rkQXHFQQ==", "post"=>{"post_title"=>"new title", "post_description"=>""}, "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (22.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.0ms)
+  Rendered posts/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 82ms (Views: 48.1ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/categories/3/posts" for 127.0.0.1 at 2017-08-09 22:29:30 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (56.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY "posts"."id" DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (88.1ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 57.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/views/posts/index.html.erb:5:in `block in _app_views_posts_index_html_erb___939066641441938575_70261641443800'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb___939066641441938575_70261641443800'
+Started GET "/categories/3/" for 127.0.0.1 at 2017-08-09 22:29:36 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 94ms (Views: 75.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:29:38 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (19.3ms)
+  Rendered posts/new.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 95ms (Views: 79.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:30:03 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (25.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (7.2ms)
+  Rendered posts/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 91ms (Views: 57.7ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:37:20 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (38.9ms)
+  Rendered posts/new.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 324ms (Views: 276.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:38:13 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (27.7ms)
+  Rendered posts/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 210ms (Views: 169.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:38:58 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.5ms)
+  Rendered posts/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 106ms (Views: 94.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:39:21 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (15.5ms)
+  Rendered posts/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 112ms (Views: 99.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:39:31 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (14.2ms)
+  Rendered posts/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 75ms (Views: 67.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:41:41 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (29.0ms)
+  Rendered posts/new.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 195ms (Views: 144.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/3/" for 127.0.0.1 at 2017-08-09 22:44:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (74.3ms)
+Completed 200 OK in 227ms (Views: 178.8ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/categories/3/posts/29" for 127.0.0.1 at 2017-08-09 22:44:04 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"29"}
+  [1m[36mUser Load (98.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (31.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (52.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 305ms (Views: 94.5ms | ActiveRecord: 181.9ms)
+
+
+Started GET "/categories/3/posts/29" for 127.0.0.1 at 2017-08-09 22:55:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"29"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 264ms (Views: 197.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-09 22:55:16 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (6.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (44.9ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 83.0ms | ActiveRecord: 7.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-08-09 22:55:23 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XVDKjsgsvxS8rZ52QejeFKvcyL4uYq5w02C3QuCUMiE5nYINh7NUHSbUFgEyHgPErlz16urGnPnkqu6Tryp5NQ=="}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (24.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 102ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-09 22:55:23 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 87ms (Views: 80.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-09 22:55:27 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 143ms (Views: 122.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-08-09 22:55:30 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 91ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-09 22:56:04 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 217ms (Views: 193.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-08-09 22:56:07 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xlrPo5zP9//fNW7jtFD1N5mroC33iAK08PpDQ3iMxNYVz4OTkQC4J9EbggW2MrArWebdZ0wrRBTfFeBjQAn9dA==", "user"=>{"email"=>"olessia.potapova@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (57.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "olessia.potapova@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (68.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2017-08-10 03:56:08.174071"], ["last_sign_in_at", "2017-08-10 01:32:53.663903"], ["sign_in_count", 10], ["updated_at", "2017-08-10 03:56:08.181052"], ["id", 1]]
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 387ms (ActiveRecord: 138.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-09 22:56:08 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (22.7ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 70.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-09 22:56:14 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (8.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 99ms (Views: 66.9ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:56:15 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (18.6ms)
+  Rendered posts/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 96ms (Views: 78.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 22:56:16 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (4.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 48ms (ActiveRecord: 5.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 22:58:32 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (23.1ms)
+  Rendered posts/new.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 173ms (Views: 120.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 22:58:32 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (17.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 55ms (ActiveRecord: 20.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:01:09 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (25.8ms)
+  Rendered posts/new.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 171ms (Views: 123.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 23:01:10 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 31ms (ActiveRecord: 8.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:14:10 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (6.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (30.2ms)
+  Rendered posts/new.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 305ms (Views: 239.7ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 23:14:10 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (24.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (7.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 105ms (ActiveRecord: 32.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:16:27 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (27.2ms)
+  Rendered posts/new.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 177ms (Views: 141.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 23:16:28 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 59ms (ActiveRecord: 10.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:19:45 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (35.9ms)
+  Rendered posts/new.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 346ms (Views: 276.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 23:19:45 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 40ms (ActiveRecord: 9.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:20:01 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.6ms)
+  Rendered posts/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 86ms (Views: 61.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 23:20:01 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (47.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 75ms (ActiveRecord: 48.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:20:06 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (4.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (49.8ms)
+  Rendered posts/new.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 290ms (Views: 208.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 23:20:06 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (22.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 159ms (ActiveRecord: 24.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:21:57 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (487.3ms)
+  Rendered posts/new.html.erb within layouts/application (496.0ms)
+Completed 200 OK in 645ms (Views: 600.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 23:21:58 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (10.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 83ms (ActiveRecord: 13.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:22:05 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.3ms)
+  Rendered posts/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 64ms (Views: 57.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/3/posts/trees.jpg" for 127.0.0.1 at 2017-08-09 23:22:05 -0500
+Processing by PostsController#show as JPEG
+  Parameters: {"category_id"=>"3", "id"=>"trees"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=trees [WHERE "posts"."user_id" = $1]):
+  
+app/controllers/posts_controller.rb:10:in `show'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:29:11 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (30.7ms)
+  Rendered posts/new.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 282ms (Views: 207.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:30:19 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (13.2ms)
+  Rendered posts/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 190ms (Views: 150.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:30:55 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.7ms)
+  Rendered posts/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 122ms (Views: 110.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:32:26 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (49.2ms)
+  Rendered posts/new.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 280ms (Views: 209.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-09 23:32:41 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (7.6ms)
+  Rendered posts/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 96ms (Views: 84.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-09 23:33:04 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (14.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 97ms (Views: 67.4ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-09 23:33:07 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (33.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 76.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-08-09 23:33:10 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 126ms (Views: 107.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/categories/1/posts/19" for 127.0.0.1 at 2017-08-09 23:33:18 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"19"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 19], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 109ms (Views: 86.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/categories/1/posts/24" for 127.0.0.1 at 2017-08-09 23:33:22 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"24"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 24], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 164ms (Views: 112.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:33:57 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (3.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (23.2ms)
+  Rendered posts/new.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 200ms (Views: 135.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:35:58 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (32.5ms)
+  Rendered posts/new.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 274ms (Views: 209.4ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:43:40 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (43.2ms)
+  Rendered posts/new.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 355ms (Views: 282.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-08-09 23:43:48 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (8.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (100.8ms)
+Completed 200 OK in 218ms (Views: 189.9ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:47:48 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (36.9ms)
+  Rendered posts/new.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 309ms (Views: 251.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:48:28 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.7ms)
+  Rendered posts/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 102ms (Views: 89.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:48:36 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (20.3ms)
+  Rendered posts/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 151ms (Views: 138.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:51:55 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (52.8ms)
+  Rendered posts/new.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 310ms (Views: 240.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:52:15 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (11.8ms)
+  Rendered posts/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 90ms (Views: 80.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:58:16 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (41.5ms)
+  Rendered posts/new.html.erb within layouts/application (61.3ms)
+Completed 200 OK in 275ms (Views: 194.9ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-09 23:58:38 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (13.5ms)
+  Rendered posts/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 123ms (Views: 102.7ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:03:52 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (45.0ms)
+  Rendered posts/new.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 667ms (Views: 604.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:04:21 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.5ms)
+  Rendered posts/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 67ms (Views: 57.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:04:29 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (8.9ms)
+  Rendered posts/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 86ms (Views: 67.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:04:36 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.2ms)
+  Rendered posts/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 80ms (Views: 67.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:07:00 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (22.8ms)
+  Rendered posts/new.html.erb within layouts/application (39.3ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 2.3ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ion, class: 'form-control' rows="5" );@output_buffer.safe_ap...
+...                               ^):
+  
+app/views/posts/_form.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261615603980'
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:07:13 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (25.8ms)
+  Rendered posts/new.html.erb within layouts/application (41.3ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 3.3ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:23: syntax error, unexpected ')', expecting =>
+...ass: 'form-control', rows="5" );@output_buffer.safe_append='...
+...                               ^
+/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/posts/_form.html.erb:23: syntax error, unexpected ')', expecting =>
+app/views/posts/_form.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/_form.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261665002900'
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:07:27 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (15.7ms)
+  Rendered posts/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 92ms (Views: 77.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:09:51 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (29.3ms)
+  Rendered posts/new.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 180ms (Views: 143.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:11:22 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (33.3ms)
+  Rendered posts/new.html.erb within layouts/application (62.7ms)
+Completed 200 OK in 251ms (Views: 195.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:13:20 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (26.5ms)
+  Rendered posts/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 207ms (Views: 159.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/categories/1/posts/new" for 127.0.0.1 at 2017-08-10 00:13:35 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.9ms)
+  Rendered posts/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 72ms (Views: 61.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/categories/1/posts" for 127.0.0.1 at 2017-08-10 00:14:08 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"13JRfCHhDC6AOgWVJRDebydifqSQkcmfAryU0urLKfyHL717ydZJ+CMvfL2kv+zHjgPxpFg2038T7zSEo2SKEQ==", "post"=>{"post_title"=>"how you like dem apples", "post_description"=>"Checkboxes and radios can both be disabled by setting the disabled html attribute on the input, as well as assigning the container (which has a class of checkbox or radio) the disabled class.\r\n\r\nAnother nice feature is that you can change your checkboxes and radios into inline checkboxes and radios simply by replacing the checkbox or radio class on the container, with checkbox-inline or radio-inline respectively.\r\n\r\nIn order to use a select, you just assign the form-control class to the select element.\r\n\r\nThere are many more features regarding forms included with Bootstrap. Things like validation states and read-only controls. You can read more here.\r\n\r\nImplementing a Bootstrap form in our app\r\n\r\nOur form for creating a new Todo is the perfect place to try out Bootstrap forms. We will make this a horizontal form.\r\n\r\nHere is our new form template:"}, "commit"=>"Save Post", "category_id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (29.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (56.9ms)[0m  [1m[32mINSERT INTO "posts" ("post_title", "post_description", "created_at", "updated_at", "user_id", "category_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["post_title", "how you like dem apples"], ["post_description", "Checkboxes and radios can both be disabled by setting the disabled html attribute on the input, as well as assigning the container (which has a class of checkbox or radio) the disabled class.\r\n\r\nAnother nice feature is that you can change your checkboxes and radios into inline checkboxes and radios simply by replacing the checkbox or radio class on the container, with checkbox-inline or radio-inline respectively.\r\n\r\nIn order to use a select, you just assign the form-control class to the select element.\r\n\r\nThere are many more features regarding forms included with Bootstrap. Things like validation states and read-only controls. You can read more here.\r\n\r\nImplementing a Bootstrap form in our app\r\n\r\nOur form for creating a new Todo is the perfect place to try out Bootstrap forms. We will make this a horizontal form.\r\n\r\nHere is our new form template:"], ["created_at", "2017-08-10 05:14:08.142961"], ["updated_at", "2017-08-10 05:14:08.142961"], ["user_id", 1], ["category_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1/posts/31
+Completed 302 Found in 190ms (ActiveRecord: 89.6ms)
+
+
+Started GET "/categories/1/posts/31" for 127.0.0.1 at 2017-08-10 00:14:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 31], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 160ms (Views: 131.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2017-08-10 00:14:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/categories/1/posts/31/edit" for 127.0.0.1 at 2017-08-10 00:14:16 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"category_id"=>"1", "id"=>"31"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 31], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (37.4ms)
+  Rendered posts/edit.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 115ms (Views: 97.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2017-08-10 00:14:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/categories/1/posts/31/edit" for 127.0.0.1 at 2017-08-10 00:15:40 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"category_id"=>"1", "id"=>"31"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (5.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 31], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (34.1ms)
+  Rendered posts/edit.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 237ms (Views: 160.1ms | ActiveRecord: 8.7ms)
+
+
+Started PUT "/categories/1/posts/31" for 127.0.0.1 at 2017-08-10 00:15:50 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"95jdVXojxDkXWqwLwiWAlVwQOLJ15jOwjDIzrvBmX9ynxTFSkhSB77RP1SNDirI99XG3sr1BKVCdYZP4ucn8MQ==", "post"=>{"post_title"=>"how you like dem apples", "post_description"=>"Checkboxes and radios can both be disabled by setting the disabled html attribute on the input, as well as assigning the container (which has a class of checkbox or radio) the disabled class.\r\n\r\nAnother nice feature is that you can change your checkboxes and radios into inline checkboxes and radios simply by replacing the checkbox or radio class on the container, with checkbox-inline or radio-inline respectively.\r\n\r\nIn order to use a select, you just assign the form-control class to the select element.\r\n\r\nThere are many more features regarding forms included with Bootstrap. Things like validation states and read-only controls. You can read more here.\r\n\r\nImplementing a Bootstrap form in our app\r\n\r\nOur form for creating a new Todo is the perfect place to try out Bootstrap forms. We will make this a horizontal form.\r\n\r\nHere is our new form template:", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fce1c9d1560 @tempfile=#<Tempfile:/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/RackMultipart20170810-79562-1tu9zwx.jpg>, @original_filename="landingpage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"landingpage.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save Post", "category_id"=>"1", "id"=>"31"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 31], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-lizr3u.jpg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]' -auto-orient -resize "150x150" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/6ffefc19b4919137a0d995bf90e6592020170810-79562-cxmoeu'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]' -auto-orient -resize "300x300" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/6ffefc19b4919137a0d995bf90e6592020170810-79562-w4c1m9'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-podysz.jpg[0]' -auto-orient -resize "600x600" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/6ffefc19b4919137a0d995bf90e6592020170810-79562-abx0cx'
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/a2c6b85aab42377462b06a0b2469d28020170810-79562-4pv26p.jpg'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (30.7ms)[0m  [1m[33mUPDATE "posts" SET "image_file_name" = $1, "image_content_type" = $2, "image_file_size" = $3, "image_updated_at" = $4, "updated_at" = $5 WHERE "posts"."id" = $6[0m  [["image_file_name", "landingpage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 49738], ["image_updated_at", "2017-08-10 05:15:50.577926"], ["updated_at", "2017-08-10 05:15:51.192345"], ["id", 31]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1/posts/31
+Completed 302 Found in 765ms (ActiveRecord: 40.8ms)
+
+
+Started GET "/categories/1/posts/31" for 127.0.0.1 at 2017-08-10 00:15:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"31"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 31], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 597ms (Views: 581.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-10 00:16:03 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (8.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (52.3ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 138ms (Views: 121.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-10 00:16:07 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 108ms (Views: 98.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/categories/3/posts/29" for 127.0.0.1 at 2017-08-10 00:16:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"29"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (23.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 29], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 100ms (Views: 62.5ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:16:21 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (20.2ms)
+  Rendered posts/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 137ms (Views: 101.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:16:40 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.4ms)
+  Rendered posts/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 71ms (Views: 56.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:16:51 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.0ms)
+  Rendered posts/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 74ms (Views: 63.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:17:06 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (27.2ms)
+  Rendered posts/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 79ms (Views: 71.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:17:15 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (11.2ms)
+  Rendered posts/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 98ms (Views: 88.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:17:28 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.9ms)
+  Rendered posts/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 75ms (Views: 64.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:17:35 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.8ms)
+  Rendered posts/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 66ms (Views: 55.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:17:49 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (8.5ms)
+  Rendered posts/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 76ms (Views: 67.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:22:06 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (15.8ms)
+  Rendered posts/new.html.erb within layouts/application (44.9ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 2.8ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected ':', expecting ')'
+...append=( f.text_area rows="4" :post_description, class: 'for...
+...                               ^):
+  
+app/views/posts/_form.html.erb:27: syntax error, unexpected ':', expecting ')'
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261645133600'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:23:18 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (11.6ms)
+  Rendered posts/new.html.erb within layouts/application (28.3ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 3.0ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected tLABEL, expecting '='
+...end=( f.text_area, placeholder: "description", :post_descrip...
+...                               ^
+/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected ',', expecting ')'
+...ea, placeholder: "description", :post_description, class: 'f...
+...                               ^):
+  
+app/views/posts/_form.html.erb:27: syntax error, unexpected tLABEL, expecting '='
+app/views/posts/_form.html.erb:27: syntax error, unexpected ',', expecting ')'
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261641063100'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:23:31 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.3ms)
+  Rendered posts/new.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected ',', expecting =>
+...escription", :post_description, class: 'form-control' );@out...
+...                               ^):
+  
+app/views/posts/_form.html.erb:27: syntax error, unexpected ',', expecting =>
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261614324360'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:23:48 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.7ms)
+  Rendered posts/new.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.2ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected ':', expecting ')'
+...ea placeholder: "description" :post_description, class: 'for...
+...                               ^):
+  
+app/views/posts/_form.html.erb:27: syntax error, unexpected ':', expecting ')'
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261541181900'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:24:36 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (8.3ms)
+  Rendered posts/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 67ms (Views: 60.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:25:02 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.5ms)
+  Rendered posts/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 71ms (Views: 47.8ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:25:30 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.6ms)
+  Rendered posts/new.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.5ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected ',', expecting =>
+...older: "description", rows="5", class: 'form-control' );@out...
+...                               ^):
+  
+app/views/posts/_form.html.erb:27: syntax error, unexpected ',', expecting =>
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261625752380'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:25:40 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.1ms)
+  Rendered posts/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected keyword_class, expecting =>
+...: "description", rows="5" class: 'form-control' );@output_bu...
+...                               ^):
+  
+app/views/posts/_form.html.erb:27: syntax error, unexpected keyword_class, expecting =>
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261660159100'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:27:15 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (12.2ms)
+  Rendered posts/new.html.erb within layouts/application (50.8ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 2.7ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tyle: 'width:100%;' placeholder: "description", class: 'form...
+...                               ^
+/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:27: syntax error, unexpected ',', expecting ')'
+...%;' placeholder: "description", class: 'form-control' );@out...
+...                               ^):
+  
+app/views/posts/_form.html.erb:27: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/posts/_form.html.erb:27: syntax error, unexpected ',', expecting ')'
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261624358280'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:27:23 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (19.0ms)
+  Rendered posts/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 94ms (Views: 82.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:28:26 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.6ms)
+  Rendered posts/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 72ms (Views: 63.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:29:13 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (190.2ms)
+  Rendered posts/new.html.erb within layouts/application (196.4ms)
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:16: syntax error, unexpected tLABEL
+...e;@output_buffer.append=(class: 'col-md-4 control-label' );@...
+...                               ^
+/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:25: syntax error, unexpected tLABEL
+...e;@output_buffer.append=(class: 'col-md-3 control-label' );@...
+...                               ^):
+  
+app/views/posts/_form.html.erb:16: syntax error, unexpected tLABEL
+app/views/posts/_form.html.erb:25: syntax error, unexpected tLABEL
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261541029280'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:29:23 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.9ms)
+  Rendered posts/new.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.8ms)
+
+
+  
+SyntaxError (/Users/Olie/coding/learningruby/KnowYourself/app/views/posts/_form.html.erb:16: syntax error, unexpected tLABEL
+...e;@output_buffer.append=(class: 'col-md-4 control-label' );@...
+...                               ^):
+  
+app/views/posts/_form.html.erb:16: syntax error, unexpected tLABEL
+app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb___2011407701673320567_70261645266180'
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:29:30 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (11.6ms)
+  Rendered posts/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 65ms (Views: 55.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:29:39 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (10.9ms)
+  Rendered posts/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 55ms (Views: 47.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:29:45 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.0ms)
+  Rendered posts/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 52ms (Views: 43.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:29:56 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.0ms)
+  Rendered posts/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 46ms (Views: 37.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:30:02 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.9ms)
+  Rendered posts/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 52ms (Views: 41.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:30:25 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.9ms)
+  Rendered posts/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 41ms (Views: 34.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:30:35 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.2ms)
+  Rendered posts/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 59ms (Views: 49.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:30:55 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (15.1ms)
+  Rendered posts/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 56ms (Views: 49.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:32:02 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (29.3ms)
+  Rendered posts/new.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 180ms (Views: 128.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-10 00:33:51 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (7.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (109.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 248ms (Views: 206.0ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-08-10 00:33:54 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered categories/show.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 180ms (Views: 152.6ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/categories/3/posts/new" for 127.0.0.1 at 2017-08-10 00:35:45 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (27.3ms)
+  Rendered posts/new.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 222ms (Views: 150.8ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/categories/3/posts" for 127.0.0.1 at 2017-08-10 00:36:14 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GSPvmk7gSyA6wKMwLXTWZlxhWwXhf3AY+u/+YKnklwNv4I47+Z1AwUqHvn+y37xKefIh/GkUIvu/b7Fog7cB8g==", "post"=>{"post_title"=>"another great post", "post_description"=>"Another nice feature is that you can change your checkboxes and radios into inline checkboxes and radios simply by replacing the checkbox or radio class on the container, with checkbox-inline or radio-inline respectively.\r\n\r\nIn order to use a select, you just assign the form-control class to the select element.\r\n\r\nThere are many more features regarding forms included with Bootstrap. Things like validation states and read-only controls. You can read more here.\r\n\r\n", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fce1c1403b0 @tempfile=#<Tempfile:/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/RackMultipart20170810-79562-1u912gf.jpeg>, @original_filename="sf.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"sf.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save Post", "category_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-1xv27nt.jpeg'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]' -auto-orient -resize "150x150" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/ff785647529b1068af79d34ace33d71420170810-79562-1fckga0'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]' -auto-orient -resize "300x300" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/ff785647529b1068af79d34ace33d71420170810-79562-1m9to4q'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-2ec50m.jpeg[0]' -auto-orient -resize "600x600" '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/ff785647529b1068af79d34ace33d71420170810-79562-2x135f'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/var/folders/f6/_x5fmb3n287dzbczcw71mxm00000gn/T/60d31eb37595dd44584be5ef363283e320170810-79562-1mafg9c.jpeg'
+  [1m[35mSQL (8.1ms)[0m  [1m[32mINSERT INTO "posts" ("post_title", "post_description", "created_at", "updated_at", "user_id", "category_id", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["post_title", "another great post"], ["post_description", "Another nice feature is that you can change your checkboxes and radios into inline checkboxes and radios simply by replacing the checkbox or radio class on the container, with checkbox-inline or radio-inline respectively.\r\n\r\nIn order to use a select, you just assign the form-control class to the select element.\r\n\r\nThere are many more features regarding forms included with Bootstrap. Things like validation states and read-only controls. You can read more here.\r\n\r\n"], ["created_at", "2017-08-10 05:36:16.614096"], ["updated_at", "2017-08-10 05:36:16.614096"], ["user_id", 1], ["category_id", 3], ["image_file_name", "sf.jpeg"], ["image_content_type", "image/jpeg"], ["image_file_size", 519479], ["image_updated_at", "2017-08-10 05:36:14.637465"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/3/posts/32
+Completed 302 Found in 2076ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/categories/3/posts/32" for 127.0.0.1 at 2017-08-10 00:36:16 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"category_id"=>"3", "id"=>"32"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 32], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 271ms (Views: 253.9ms | ActiveRecord: 2.1ms)
+
+

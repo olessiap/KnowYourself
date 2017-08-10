@@ -121,7 +121,6 @@ header {
     box-shadow:         0px 0px 12px 4px rgba(50, 50, 50, 0.75);
 }
 
-
 .blog-info {
     text-align: center;
 }
@@ -155,7 +154,35 @@ a {
   text-decoration: none;
 }
 
-
 a:hover {
   text-decoration: none;
 }
+
+/*#post_post_title {
+  width:400px;
+}
+
+#post_post_description {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 100px;
+}
+
+.form-container {
+  margin: auto;
+  width:75%;
+  padding:10px;
+  background-color: yellow;
+}
+
+.title_field {
+  margin: 0 auto;
+  width:50%;
+  padding:10px;
+}
+*/

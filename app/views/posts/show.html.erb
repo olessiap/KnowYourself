@@ -1,28 +1,19 @@
 <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
 
 <article>
-    
     <header>
         <img id="image"<%= image_tag @post.image.url %> >
         <div class="header-text"> 
         	<%= @post.post_title %>
         </div>
-        
     </header>
-    
     <div class="background-bar">
-        
     </div>
-    
     <section class="container-fluid main-body">
         <section class="row">
-            
             <div class="hidden-xs col-sm-1 col-md-2">
-                
             </div>
-            
             <div class="col-xs-12 col-sm-10 col-md-8">
-            
                 <div class="content-holder">
                     <div class="content-description">
                     	<div class="published-date">
@@ -35,25 +26,16 @@
 										<%= link_to 'Delete', category_post_path(@category, @post.id), :method => :delete %>
 									</div>
 								<% end %>
-
                     		</span>
-
                     	</div>
                     </div>
                     <div class="content-body">
                         <p><%= @post.post_description %> </p>
-                         
                     </div>
-
                     <div class="hidden-xs col-sm-1 col-md-2">
-                
             		</div>
-                    
                 </div>
-            
             </div>
-            
         </section>
     </section>
-    
 </article>
