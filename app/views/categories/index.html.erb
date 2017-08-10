@@ -1,5 +1,4 @@
-<div class="container">
-  <h2>KNOW YOURSELF</h2>
+<div class="content-container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -25,7 +24,7 @@
           <% end %>
 
           <div class="carousel-caption">
-            <%= link_to slide.category_title, category_path(slide), data: {target: '#carousel-custom', slide_to: i}, class: (i == 0 ? 'active' : nil) %>
+              <%= link_to slide.category_title, category_path(slide), data: {target: '#carousel-custom', slide_to: i}, class: (i == 0 ? 'active' : nil) %>
           </div>
         </div>
       <% end %>

@@ -1,7 +1,14 @@
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  width: 70%;
+  width: 130%;
   margin: auto;
+  color: #fff;
+}
+
+.carousel-inner > .item > .carousel-caption > a {
+  color:#fff;
+  font-size: 40px;
+  text-align: center;
 }
 
 .textWithBlurredBg{
@@ -46,7 +53,6 @@
 
 header {
     margin-top: 0;
-    
     width: 100vw;
     position:relative;
     
@@ -129,7 +135,27 @@ header {
 
 }
 
+.post-body {
+  width: 40%;
 }
-/*jumbutroon 
-background-size:cover
-min-height = 350px; */
+
+.navbar {
+  margin-bottom: 0;
+  z-index: 100;
+  background: rgba(0,0,0,0.7);
+  border: none;
+  border-radius: 0;
+}
+
+.content-container {
+  margin-top: -52px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
