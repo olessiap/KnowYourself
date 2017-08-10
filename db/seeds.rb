@@ -19,12 +19,14 @@ Category.create!([{category_title: "Special Events"},
 		{category_title: "family"}
 		])
 
+User.create!(email: "o@dd.com", password:"123456")
+
 5.times do |i|
 	Post.create!(
 		post_title:Faker::Beer.name,
 		post_description:Faker::Hipster.paragraphs,
 		user_id: User.first.id,
-		category_id: Category.first.id
+		category: Category.first
 		#image_file_name: File.open(Rails.root, "/public/seed/#{file_name}.jpg")
 		)
 end
