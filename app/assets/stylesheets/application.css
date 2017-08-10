@@ -1,7 +1,8 @@
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 130%;
-  margin: auto;
+/*  height: 100%;
+*/  margin: auto;
   color: #fff;
 }
 
@@ -9,6 +10,20 @@
   color:#fff;
   font-size: 40px;
   text-align: center;
+  font-size:70px;
+}
+
+.carousel-inner > .item > .carousel-caption > a:hover {
+  color:#ddd;
+}
+
+.carousel-caption {
+  bottom: 45%;
+}
+
+.corousel-inner > .item > img {
+  background-size:cover;
+  background-position:center;
 }
 
 .textWithBlurredBg{
@@ -58,8 +73,7 @@ header {
     
 }
 
-#image
-{
+#image {
   background-size: cover;
   position:absolute;
   display: table;
@@ -70,10 +84,11 @@ header {
 
 .header-text {
     text-align: center;
-    color: #000;
+    color: #545454;
     vertical-align: middle;
     font-size: 3em;
-    text-shadow: 2px 3px rgba(0,0,0,0.2);
+    text-shadow: 2px 3px rgba(0,0,0,0.1);
+    margin-top: 12px;
 }  
 
 .date {
@@ -144,6 +159,18 @@ header {
   border-radius: 0;
 }
 
+.navbar-title a {
+  color:#fff;
+  font-size: 14px;
+  font-family: Pacifico;
+  font-size: 28px;
+}
+
+.navbar-title a:hover {
+  text-orientation: none;
+  color:#ddd;
+}
+
 .content-container {
   margin-top: -52px;
 }
@@ -171,4 +198,35 @@ h3 {
 
 .post-tile {
   padding:30px;
+}
+
+.new-post {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  border: none;
+  background-color: #545454;
+  margin-left: 990px;
+}
+
+.glyphicon-plus {
+  font-size: 30px;
+  padding-left: 3px;
+  color: #fff;
+}
+
+.glyphicon-user {
+  color:#fff;
+}
+
+.glyphicon-log-in {
+  color:#fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color:#fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color:#ddd;
 }

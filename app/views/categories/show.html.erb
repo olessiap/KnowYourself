@@ -1,7 +1,17 @@
 <div class="container">
   <div class="page-details"></div><br>
     <div class="header-text"><%= @category.category_title %></div>
-    <%= link_to "New Post", new_category_post_path(@category) %><br>
+      <button class="new-post">
+        <%= link_to (new_category_post_path(@category)) do %>
+         <span class="glyphicon glyphicon-plus" aria-hidden="true"> </span>
+        <% end %>
+      </button>
+     
+      <!-- <button class="new-post"> -->
+         
+<!--       </button>
+ -->    
+    <br>
     <div class="post-tiles">
       <% if user_signed_in? %>
         <% @category.posts.each do |post| %><br>
