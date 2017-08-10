@@ -1,14 +1,20 @@
 <div class="container">
-<p><%= @category.category_title %></p>
-<%= link_to "New Post", new_category_post_path(@category) %><br>
-  <% if user_signed_in? %>
-    <% @category.posts.each do |post| %><br>
-      <% if current_user == post.user %>
-        <a href="<%= category_post_path(@category, post) %>" class="textWithBlurredBg"> 
-          <%= image_tag post.image.url %>
-          <h2><%= post.post_title%></h2>
-        </a>
+  <div class="page-details"></div><br>
+    <div class="header-text"><%= @category.category_title %></div>
+    <%= link_to "New Post", new_category_post_path(@category) %><br>
+    <div class="post-tiles">
+      <% if user_signed_in? %>
+        <% @category.posts.each do |post| %><br>
+          <% if current_user == post.user %>
+            <div class="post-tile">
+              <a href="<%= category_post_path(@category, post) %>" class="textWithBlurredBg"> 
+                <%= image_tag post.image.url %>
+                <h2><%= post.post_title%></h2>
+              </a>
+            </div>
+          <%end%>
+        <%end%>
       <%end%>
-    <%end%>
-  <%end%>
+    </div>
+  </div>
 </div>

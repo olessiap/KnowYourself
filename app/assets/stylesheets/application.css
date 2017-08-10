@@ -60,22 +60,20 @@ header {
 
 #image
 {
-  min-height: 300px;
-  max-height: 350px;
   background-size: cover;
   position:absolute;
   display: table;
   width: 100%;
   z-index:0;
+  background-repeat: no-repeat;
 }
 
 .header-text {
-    position: absolute;
     text-align: center;
-    color: #fff;
+    color: #000;
     vertical-align: middle;
     font-size: 3em;
-    text-shadow: 2px 3px rgba(0,0,0,0.75);
+    text-shadow: 2px 3px rgba(0,0,0,0.2);
 }  
 
 .date {
@@ -158,31 +156,19 @@ a:hover {
   text-decoration: none;
 }
 
-/*#post_post_title {
-  width:400px;
+h3 {
+  margin-left: 150px;
+  margin-bottom: 25px;
 }
 
-#post_post_description {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 400px;
-  height: 100px;
+.post-tiles {
+  display: flex;
+  flex-wrap:wrap;
+  /*margin: 20px;
+  margin-top: 100px;
+  margin-left: -10px;*/
 }
 
-.form-container {
-  margin: auto;
-  width:75%;
-  padding:10px;
-  background-color: yellow;
+.post-tile {
+  padding:30px;
 }
-
-.title_field {
-  margin: 0 auto;
-  width:50%;
-  padding:10px;
-}
-*/

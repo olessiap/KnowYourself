@@ -3,9 +3,7 @@
 <article>
     <header>
         <img id="image"<%= image_tag @post.image.url %> >
-        <div class="header-text"> 
-        	<%= @post.post_title %>
-        </div>
+        
     </header>
     <div class="background-bar">
     </div>
@@ -25,6 +23,9 @@
 										<%= link_to "Edit", "/categories/#{@category.id}/posts/#{@post.id}/edit" %> |
 										<%= link_to 'Delete', category_post_path(@category, @post.id), :method => :delete %>
 									</div>
+                                    <div class="header-text"> 
+                                        <%= @post.post_title %>
+                                    </div>
 								<% end %>
                     		</span>
                     	</div>
