@@ -1,0 +1,284 @@
+/* line 1, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 130%;
+  /*  height: 100%;
+  */
+  margin: auto;
+  color: #fff;
+}
+
+/* line 9, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.carousel-inner > .item > .carousel-caption > a {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  font-size: 70px;
+}
+
+/* line 16, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.carousel-inner > .item > .carousel-caption > a:hover {
+  color: #ddd;
+}
+
+/* line 20, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.carousel-caption {
+  bottom: 43%;
+}
+
+/* line 24, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.corousel-inner > .item > img {
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 29, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.login-page {
+  background-image: url(/assets/background-drake-8d55610d2a29d0bf6179027528db26a4bd6c76687538151802186f8821be34a7.jpg) !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 500px;
+}
+
+/* line 37, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.textWithBlurredBg {
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  transition: .3s;
+  margin: 4px;
+}
+
+/* line 46, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.textWithBlurredBg img {
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+  border-radius: 4px;
+}
+
+/* line 53, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.textWithBlurredBg:hover img {
+  filter: blur(2px) brightness(60%);
+  box-shadow: 0 0 16px cyan;
+}
+
+/* line 58, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.textWithBlurredBg :not(img) {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: .3s;
+}
+
+/* line 69, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.textWithBlurredBg h3 {
+  top: 50%;
+}
+
+/* line 73, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.textWithBlurredBg:hover :not(img) {
+  opacity: 1;
+}
+
+/* line 77, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+header {
+  margin-top: 0;
+  width: 100vw;
+  position: relative;
+}
+
+/* line 84, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+#image {
+  background-size: cover;
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 0;
+  background-repeat: no-repeat;
+}
+
+/* line 93, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.header-text {
+  text-align: center;
+  color: #545454;
+  vertical-align: middle;
+  font-size: 3em;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 12px;
+}
+
+/* line 102, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.date {
+  font-size: 12px;
+}
+
+/* line 106, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.post-options {
+  font-size: 12px;
+}
+
+/* line 109, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.background-bar {
+  background: #dedede;
+  height: 90px;
+  /* -webkit-box-shadow: inset 0px 4px 12px 0px rgba(50, 50, 50, 0.75);
+   -moz-box-shadow:    inset 0px 4px 12px 0px rgba(50, 50, 50, 0.75);*/
+  box-shadow: inset 0px 4px 12px 0px rgba(50, 50, 50, 0.75);
+}
+
+/* line 117, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.main-body {
+  background: #ffffff;
+  -webkit-box-shadow: 0px -4px 14px 0px rgba(50, 50, 50, 0.35);
+  -moz-box-shadow: 0px -4px 14px 0px rgba(50, 50, 50, 0.35);
+  box-shadow: 0px -4px 14px 0px rgba(50, 50, 50, 0.35);
+}
+
+/* line 124, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.content-holder {
+  margin-top: 100px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 2px;
+ /*-moz-box-shadow:    inset 0 0 10px #000000;
+-webkit-box-shadow: inset 0 0 10px #000000;
+box-shadow:         inset 0 0 10px #000000;*/
+}
+
+/* line 134, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.content-description {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background: #fff;
+  height: 130px;
+  padding: 10px;
+  /*-webkit-box-shadow: 0px 0px 12px 4px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 12px 4px rgba(50, 50, 50, 0.75);*/
+  box-shadow: 0px 0px 12px 4px rgba(50, 50, 50, 0.75);
+}
+
+/* line 145, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.blog-info {
+  text-align: center;
+}
+
+/* line 149, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.content-body {
+  background: #fff;
+  min-height: 600px;
+  padding: 40px 5px;
+  font-size: 1.2em;
+  color: #303030;
+}
+
+/* line 158, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.post-body {
+  width: 40%;
+}
+
+/* line 162, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.navbar {
+  margin-bottom: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 0;
+}
+
+/* line 170, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.navbar-title a {
+  color: #fff;
+  font-size: 14px;
+  font-family: Pacifico;
+  font-size: 28px;
+}
+
+/* line 177, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.navbar-title a:hover {
+  text-orientation: none;
+  color: #ddd;
+}
+
+/* line 182, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.content-container {
+  margin-top: -52px;
+}
+
+/* line 186, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 190, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 194, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+h3 {
+  margin-left: 150px;
+  margin-bottom: 25px;
+}
+
+/* line 199, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.post-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  /*margin: 20px;
+  margin-top: 100px;
+  margin-left: -10px;*/
+}
+
+/* line 207, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.post-tile {
+  padding: 30px;
+}
+
+/* line 211, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.new-post {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  border: none;
+  background-color: #545454;
+  margin-left: 990px;
+}
+
+/* line 220, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.glyphicon-plus {
+  font-size: 30px;
+  padding-left: 3px;
+  color: #fff;
+}
+
+/* line 226, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.glyphicon-user {
+  color: #fff;
+}
+
+/* line 230, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.glyphicon-log-in {
+  color: #fff;
+}
+
+/* line 234, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+/* line 238, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ddd;
+}
+
+/* line 242, /Users/Olie/coding/learningruby/KnowYourself/app/assets/stylesheets/application.scss */
+.container {
+  width: 100%;
+}

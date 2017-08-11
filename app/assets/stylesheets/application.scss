@@ -27,7 +27,7 @@
 }
 
 .login-page {
-  background-image: asset-url("background-drake.jpg");
+  background-image: image-url("background-drake.jpg") !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
