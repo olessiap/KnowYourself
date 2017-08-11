@@ -242,3 +242,11 @@ h3 {
 .container {
   width: 100%;
 }
+
+.login-page {
+  background: url("knowyourself.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 500px;
+}
