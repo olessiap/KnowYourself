@@ -12,11 +12,11 @@
 #categories = Category.create([{category_title: "great sharks" }, {category_title: "Amazing Falafels"} ])
 
 
-Category.create!([{category_title: "Special Events"},
-		{category_title: "Around The World"},
-		{category_title: "Amazing Falafels"},
+Category.create!([{category_title: "Around The World"},
+		{category_title: "Special Events"},
+		{category_title: "Wild Thoughts"},
 		{category_title: "Relationships"},
-		{category_title: "family"}
+		{category_title: "Achievements"}
 		])
 
 User.create!(email: "o@dd.com", password:"123456")

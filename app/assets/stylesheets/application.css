@@ -18,7 +18,7 @@
 }
 
 .carousel-caption {
-  bottom: 45%;
+  bottom: 43%;
 }
 
 .corousel-inner > .item > img {
@@ -229,4 +229,16 @@ h3 {
 
 .navbar-default .navbar-nav>li>a:hover {
   color:#ddd;
+}
+
+.devise-reg {
+  background:url('drops.jpg') 
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
 }
