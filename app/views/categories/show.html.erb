@@ -6,6 +6,7 @@
          <span class="glyphicon glyphicon-plus" aria-hidden="true"> </span>
         <% end %>
       </button>
+      
      
       <!-- <button class="new-post"> -->
          
@@ -19,7 +20,8 @@
             <div class="post-tile">
               <a href="<%= category_post_path(@category, post) %>" class="textWithBlurredBg"> 
                 <%= image_tag post.image.url %>
-                <h2><%= post.post_title%></h2>
+                <h2><%= post.post_title%></h2> 
+                  <p><%= time_ago_in_words(post.created_at) %> ago </p>
               </a>
             </div>
           <%end%>

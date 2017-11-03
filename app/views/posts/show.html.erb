@@ -20,7 +20,8 @@
 									<% if user_signed_in? && current_user == @post.user%>
 									Submitted <%= time_ago_in_words(@post.created_at) %> ago </p>
 									<div class="post-options">
-										<%= link_to "Edit", "/categories/#{@category.id}/posts/#{@post.id}/edit" %> |
+										<%= link_to "Back", "/categories/#{@category.id}" %> |
+                                        <%= link_to "Edit", "/categories/#{@category.id}/posts/#{@post.id}/edit" %> |
 										<%= link_to 'Delete', category_post_path(@category, @post.id), :method => :delete %>
 									</div>
                                     <div class="header-text"> 
